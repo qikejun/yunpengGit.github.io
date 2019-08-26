@@ -4,8 +4,8 @@
 $(document).ready(function () {
   var algoliaSettings = CONFIG.algolia;
   var isAlgoliaSettingsValid = algoliaSettings.applicationID &&
-                               algoliaSettings.apiKey &&
-                               algoliaSettings.indexName;
+    algoliaSettings.apiKey &&
+    algoliaSettings.indexName;
 
   if (!isAlgoliaSettingsValid) {
     window.console.error('Algolia Settings are invalid.');
@@ -40,14 +40,14 @@ $(document).ready(function () {
           var link = data.permalink ? data.permalink : (CONFIG.root + data.path);
           return (
             '<a href="' + link + '" class="algolia-hit-item-link">' +
-              data._highlightResult.title.value +
+            data._highlightResult.title.value +
             '</a>'
           );
         },
         empty: function (data) {
           return (
             '<div id="algolia-hits-empty">' +
-              algoliaSettings.labels.hits_empty.replace(/\$\{query}/, data.query) +
+            algoliaSettings.labels.hits_empty.replace(/\$\{query}/, data.query) +
             '</div>'
           );
         }
@@ -62,8 +62,8 @@ $(document).ready(function () {
       templates: {
         body: function (data) {
           var stats = algoliaSettings.labels.hits_stats
-                        .replace(/\$\{hits}/, data.nbHits)
-                        .replace(/\$\{time}/, data.processingTimeMS);
+            .replace(/\$\{hits}/, data.nbHits)
+            .replace(/\$\{time}/, data.processingTimeMS);
           return (
             stats +
             '<span class="algolia-powered">' +
@@ -97,7 +97,7 @@ $(document).ready(function () {
 
   search.start();
 
-  $('.popup-trigger').on('click', function(e) {
+  $('.popup-trigger').on('click', function (e) {
     e.stopPropagation();
     $('body')
       .append('<div class="search-popup-overlay algolia-pop-overlay"></div>')
@@ -106,7 +106,7 @@ $(document).ready(function () {
     $('#algolia-search-input').find('input').focus();
   });
 
-  $('.popup-btn-close').click(function(){
+  $('.popup-btn-close').click(function () {
     $('.popup').hide();
     $('.algolia-pop-overlay').remove();
     $('body').css('overflow', '');
