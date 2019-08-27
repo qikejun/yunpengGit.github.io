@@ -4,6 +4,12 @@ const ap = new APlayer({
   autoplay: true,
   lrcType: 3,
   audio: [{
+      name: "发如雪",
+      artist: '周杰伦',
+      url: './aplayer/mp3/发如雪_周杰伦_128K.mp3',
+      cover: './aplayer/mp3/十一月的萧邦.jpg',
+      lrc: './aplayer/mp3/发如雪_周杰伦_128K.lrc',
+    }, {
       name: "等你下课",
       artist: '周杰伦',
       url: './aplayer/mp3/等你下课_周杰伦_128K.mp3',
