@@ -3,6 +3,13 @@ const ap = new APlayer({
   fixed: true,
   autoplay: true,
   audio: [{
+      name: "等你下课",
+      artist: '周杰伦',
+      url: './aplayer/mp3/等你下课_周杰伦_128K.mp3',
+      cover: './aplayer/mp3/等你下课.jpg',
+      lrc: './aplayer/mp3/等你下课_周杰伦_128K.lrc',
+    },
+    {
       name: "告白气球",
       artist: '周杰伦',
       url: './aplayer/mp3/告白气球_周杰伦_128K.mp3',
