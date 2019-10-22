@@ -1,1 +1,171 @@
-!function(){var e=document.querySelector(".bg-box"),a=(new Date).getHours();5<a&&a<19?e.classList.add("snow-sky"):e.classList.add("starry-sky")}(),onload=function(){var c=0,e=document.getElementsByTagName("html")[0],i=document.getElementsByTagName("body")[0];e.onclick=function(e){var a=document.createElement("b");a.style.color="#E94F06",a.style.zIndex=9999,a.style.position="absolute",a.style.select="none";var n=e.pageX,r=e.pageY;switch(a.style.left=n-10+"px",a.style.top=r-20+"px",clearInterval(t),++c){case 2:a.innerText="😀";break;case 3:a.innerText="😃";break;case 4:a.innerText="❤";break;case 5:a.innerText="😁";break;case 6:a.innerText="😆";break;case 7:a.innerText="😅";break;case 8:a.innerText="😂";break;case 9:a.innerText="🤣";break;case 10:a.innerText="😊";break;case 11:a.innerText="😚";break;case 12:a.innerText="😙";break;case 13:a.innerText="😗";break;case 14:a.innerText="😘";break;case 15:a.innerText="😍";break;case 16:a.innerText="😌";break;case 17:a.innerText="😉";break;case 18:a.innerText="🙃";break;case 19:a.innerText="🙂";break;case 20:a.innerText="😥";break;case 21:a.innerText="😋";break;case 22:a.innerText="😜";break;case 23:a.innerText="😝";break;case 24:a.innerText="😛";break;case 25:a.innerText="😨";break;case 26:a.innerText="😒";break;case 27:a.innerText="😎";break;case 28:a.innerText="🙄";break;case 29:a.innerText="😭";break;case 30:a.innerText="😖";break;case 31:a.innerText="(๑•́ ∀ •̀๑)";break;case 32:a.innerText="(๑•́ ₃ •̀๑)";break;case 40:a.innerText="(๑•̀_•́๑)";break;case 50:a.innerText="（￣へ￣）";break;case 60:a.innerText="(╯°口°)╯(┴—┴";break;case 70:a.innerText="૮( ᵒ̌皿ᵒ̌ )ა";break;case 80:a.innerText="╮(｡>口<｡)╭";break;case 90:a.innerText="( ง ᵒ̌皿ᵒ̌)ง⁼³₌₃";break;case 100:case 101:case 102:case 103:case 104:a.innerText="😏";break;case 105:a.innerText="(ꐦ°᷄д°᷅)";break;default:a.innerText="😂"}a.style.fontSize=10*Math.random()+8+"px";var t,s=0;setTimeout(function(){t=setInterval(function(){150==++s&&(clearInterval(t),i.removeChild(a)),a.style.top=r-20-s+"px",a.style.opacity=(150-s)/120},8)},70),i.appendChild(a)}};
+(function () {
+  var ele = document.querySelector('.bg-box');
+  var num = (new Date()).getHours();
+  if (5 < num && num < 19) {
+    ele
+      .classList
+      .add('snow-sky');
+
+  } else {
+    ele
+      .classList
+      .add('starry-sky');
+  }
+})()
+onload = function () {
+  var click_cnt = 0;
+  var $html = document.getElementsByTagName("html")[0];
+  var $body = document.getElementsByTagName("body")[0];
+  $html.onclick = function (e) {
+    var $elem = document.createElement("b");
+    $elem.style.color = "#E94F06";
+    $elem.style.zIndex = 9999;
+    $elem.style.position = "absolute";
+    $elem.style.select = "none";
+    var x = e.pageX;
+    var y = e.pageY;
+    $elem.style.left = (x - 10) + "px";
+    $elem.style.top = (y - 20) + "px";
+    clearInterval(anim);
+    switch (++click_cnt) {
+      case 2:
+        $elem.innerText = "😀";
+        break;
+      case 3:
+        $elem.innerText = "😃";
+        break;
+      case 4:
+        $elem.innerText = "❤";
+        break;
+      case 5:
+        $elem.innerText = "😁";
+        break;
+      case 6:
+        $elem.innerText = "😆";
+        break;
+      case 7:
+        $elem.innerText = "😅";
+        break;
+      case 8:
+        $elem.innerText = "😂";
+        break;
+      case 9:
+        $elem.innerText = "🤣";
+        break;
+      case 10:
+        $elem.innerText = "😊";
+        break;
+      case 11:
+        $elem.innerText = "😚";
+        break;
+      case 12:
+        $elem.innerText = "😙";
+        break;
+      case 13:
+        $elem.innerText = "😗";
+        break;
+      case 14:
+        $elem.innerText = "😘";
+        break;
+      case 15:
+        $elem.innerText = "😍";
+        break;
+      case 16:
+        $elem.innerText = "😌";
+        break;
+      case 17:
+        $elem.innerText = "😉";
+        break;
+      case 18:
+        $elem.innerText = "🙃";
+        break;
+      case 19:
+        $elem.innerText = "🙂";
+        break;
+      case 20:
+        $elem.innerText = "😥";
+        break;
+      case 21:
+        $elem.innerText = "😋";
+        break;
+      case 22:
+        $elem.innerText = "😜";
+        break;
+      case 23:
+        $elem.innerText = "😝";
+        break;
+      case 24:
+        $elem.innerText = "😛";
+        break;
+      case 25:
+        $elem.innerText = "😨";
+        break;
+      case 26:
+        $elem.innerText = "😒";
+        break;
+      case 27:
+        $elem.innerText = "😎";
+        break;
+      case 28:
+        $elem.innerText = "🙄";
+        break;
+      case 29:
+        $elem.innerText = "😭";
+        break;
+      case 30:
+        $elem.innerText = "😖";
+        break;
+      case 31:
+        $elem.innerText = "(๑•́ ∀ •̀๑)";
+        break;
+      case 32:
+        $elem.innerText = "(๑•́ ₃ •̀๑)";
+        break;
+      case 40:
+        $elem.innerText = "(๑•̀_•́๑)";
+        break;
+      case 50:
+        $elem.innerText = "（￣へ￣）";
+        break;
+      case 60:
+        $elem.innerText = "(╯°口°)╯(┴—┴";
+        break;
+      case 70:
+        $elem.innerText = "૮( ᵒ̌皿ᵒ̌ )ა";
+        break;
+      case 80:
+        $elem.innerText = "╮(｡>口<｡)╭";
+        break;
+      case 90:
+        $elem.innerText = "( ง ᵒ̌皿ᵒ̌)ง⁼³₌₃";
+        break;
+      case 100:
+      case 101:
+      case 102:
+      case 103:
+      case 104:
+        $elem.innerText = "😏";
+        break;
+      case 105:
+        $elem.innerText = "(ꐦ°᷄д°᷅)";
+        break;
+      default:
+        $elem.innerText = "😂";
+        break;
+    }
+    $elem.style.fontSize = Math.random() * 10 + 8 + "px";
+    var increase = 0;
+    var anim;
+    setTimeout(function () {
+      anim = setInterval(function () {
+        if (++increase == 150) {
+          clearInterval(anim);
+          $body.removeChild($elem);
+        }
+        $elem.style.top = y - 20 - increase + "px";
+        $elem.style.opacity = (150 - increase) / 120;
+      }, 8);
+    }, 70);
+    $body.appendChild($elem);
+  };
+};
