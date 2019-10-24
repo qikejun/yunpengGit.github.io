@@ -41,6 +41,13 @@
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">http &#123;</span><br><span class="line">    server &#123;</span><br><span class="line">    	listen       80;</span><br><span class="line">        <span class="comment">#server_name  localhost;</span></span><br><span class="line">        server_name  ceshi.com;</span><br><span class="line"></span><br><span class="line">        location ^~/api/ &#123;</span><br><span class="line"> 	        proxy_pass https://www.baidu.com/;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 ]]></content>
+      <categories>
+        <category>服务器</category>
+        <category>nginx</category>
+      </categories>
+      <tags>
+        <tag>nginx</tag>
+      </tags>
   </entry>
   <entry>
     <title>隐式转换的秘密</title>
