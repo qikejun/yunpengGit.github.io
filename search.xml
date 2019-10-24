@@ -290,6 +290,8 @@
 </li>
 <li><p>两个 一个值是数字，另一个值是字符串，先将字符串转换为数学，然后使用转换后的值进行比较。 </p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="number">0</span>==<span class="string">'01'</span> <span class="comment">//=&gt; 0==0 true</span></span><br><span class="line"><span class="comment">//比较</span></span><br><span class="line"><span class="number">0</span>==<span class="string">'0'</span> <span class="comment">//=&gt; 0==0  true</span></span><br><span class="line"><span class="number">0</span>==[]  <span class="comment">//=&gt; 0==0  true</span></span><br><span class="line"><span class="string">'0'</span>==[]  <span class="comment">//=&gt; '0'==''  false</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://yunpenggit.github.io/code/%E5%9B%BE%E8%A7%A3%E5%89%8D%E7%AB%AF/0-'0'-%5B%5D.jpg" alt="图"></p>
 </li>
 <li><p><strong>几个特殊的对象：<code>&#39;&#39;，0，&#39;0&#39;，[]，{}</code></strong></p>
 <p><strong><span style="color:skyblue"> <code>{}</code> 对象在有操作符中执行时，在 <code>{}</code> 之前有操作符，则当做 <code>{}</code> 空对象处理，如果没有则被当作一个独立的空代码块（不执行任何操作)</span></strong></p>
