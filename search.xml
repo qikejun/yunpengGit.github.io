@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title></title>
+    <title>数组的操作方法</title>
     <url>/2019/11/05/%E6%95%B0%E7%BB%84%E7%9A%84%E6%93%8D%E4%BD%9C%E6%96%B9%E6%B3%95/</url>
-    <content><![CDATA[<hr>
-<p>title: 数组的操作方法<br>date: 2019-11-05 11:34:02<br>categories: </p>
-<ul>
-<li>js</li>
-<li>Array<br>tags: Array<br>photos: </li>
-<li>‘<a href="https://yunpengGit.github.io/code/mock-img/fengbaobao/baoer5.jpg&#39;">https://yunpengGit.github.io/code/mock-img/fengbaobao/baoer5.jpg&#39;</a><br>​—</li>
-</ul>
-<h1 id="重学数组的操作"><a href="#重学数组的操作" class="headerlink" title="重学数组的操作"></a>重学数组的操作</h1><h2 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h2><p><code>Array.from()</code>  从一个类似数组或可迭代对象创建一个新的，<strong>浅拷贝的数组实例。</strong> 返回一个新的数组</p>
+    <content><![CDATA[<h1 id="重学数组的操作"><a href="#重学数组的操作" class="headerlink" title="重学数组的操作"></a>重学数组的操作</h1><h2 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h2><p><code>Array.from()</code>  从一个类似数组或可迭代对象创建一个新的，<strong>浅拷贝的数组实例。</strong> 返回一个新的数组</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Array</span>.from(<span class="string">'foo'</span>); </span><br><span class="line"><span class="comment">// [ "f", "o", "o" ]</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">set</span> = new Set(['foo', 'bar', 'baz', 'foo']);</span><br><span class="line">Array.from(<span class="keyword">set</span>);</span><br><span class="line">// [ "foo", "bar", "baz" ]</span><br><span class="line"></span><br><span class="line">Array.from([1, 2, 3], x =&gt; x + x);</span><br><span class="line">// [2, 4, 6]</span><br><span class="line"></span><br><span class="line">Array.from(&#123;length: <span class="number">5</span>&#125;, (v, i) =&gt; i);</span><br><span class="line"><span class="comment">// [0, 1, 2, 3, 4]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//数组合并</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">combine</span>(<span class="params"></span>)</span>&#123; </span><br><span class="line">    <span class="keyword">let</span> arr = [].concat.apply([], <span class="built_in">arguments</span>);  <span class="comment">//没有去重复的新数组 </span></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Array</span>.from(<span class="keyword">new</span> <span class="built_in">Set</span>(arr));</span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> m = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">2</span>], n = [<span class="number">2</span>,<span class="number">3</span>,<span class="number">3</span>]; </span><br><span class="line"><span class="built_in">console</span>.log(combine(m,n));</span><br></pre></td></tr></table></figure>
 
 <p><code>Array.isArray()</code></p>
@@ -84,6 +77,13 @@
 </li>
 </ol>
 ]]></content>
+      <categories>
+        <category>js</category>
+        <category>Array</category>
+      </categories>
+      <tags>
+        <tag>Array</tag>
+      </tags>
   </entry>
   <entry>
     <title>阿里云ecs服务器nginx搭建</title>
