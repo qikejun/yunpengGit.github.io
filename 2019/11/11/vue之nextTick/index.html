@@ -71,7 +71,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="Vue,">
 
 
 
@@ -82,13 +82,20 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="baoerjie">
-<meta property="og:url" content="https://yunpengGit.github.io/archives/index.html">
+<meta name="description" content="nextTick 使用使用场景 需要在视图更新之后，基于新的视图进行操作。    动态改变视图，接着基于更新后视图，获取属性(内容，长宽，属性值等在改变后会相应改变的值)或操作时，在nextTick中操作  12345678910//改变数据vm.message = &apos;changed&apos;//直接获取相关节点的内容，获取不到console.log(vm.$el.textContent) // 并不会得">
+<meta name="keywords" content="Vue">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue之nextTick">
+<meta property="og:url" content="https://yunpengGit.github.io/2019/11/11/vue之nextTick/index.html">
 <meta property="og:site_name" content="baoerjie">
+<meta property="og:description" content="nextTick 使用使用场景 需要在视图更新之后，基于新的视图进行操作。    动态改变视图，接着基于更新后视图，获取属性(内容，长宽，属性值等在改变后会相应改变的值)或操作时，在nextTick中操作  12345678910//改变数据vm.message = &apos;changed&apos;//直接获取相关节点的内容，获取不到console.log(vm.$el.textContent) // 并不会得">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://yunpengGit.github.io/code/mock-img/fengbaobao/baoer6.jpg">
+<meta property="og:updated_time" content="2019-11-11T07:57:38.487Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="baoerjie">
+<meta name="twitter:title" content="vue之nextTick">
+<meta name="twitter:description" content="nextTick 使用使用场景 需要在视图更新之后，基于新的视图进行操作。    动态改变视图，接着基于更新后视图，获取属性(内容，长宽，属性值等在改变后会相应改变的值)或操作时，在nextTick中操作  12345678910//改变数据vm.message = &apos;changed&apos;//直接获取相关节点的内容，获取不到console.log(vm.$el.textContent) // 并不会得">
+<meta name="twitter:image" content="https://yunpengGit.github.io/code/mock-img/fengbaobao/baoer6.jpg">
 
 
 
@@ -118,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="https://yunpengGit.github.io/archives/">
+  <link rel="canonical" href="https://yunpengGit.github.io/2019/11/11/vue之nextTick/">
 
 
 
 
 
-  <title>归档 | baoerjie</title>
+  <title>vue之nextTick | baoerjie</title>
   
 
 
@@ -143,7 +150,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
     <a href="https:/https://github.com/yunpengGit" class="github-corner" aria-label="View source on GitHub">
       <svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
@@ -300,317 +307,272 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yunpengGit.github.io/2019/11/11/vue之nextTick/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="baoer">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/timg.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="baoerjie">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h2 class="post-title" itemprop="name headline">vue之nextTick</h2>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-11T14:11:27+08:00">
+                2019-11-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 8 篇日志。 继续努力。
-      </span>
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Vue/" itemprop="url" rel="index">
+                    <span itemprop="name">Vue</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Vue/Vue/" itemprop="url" rel="index">
+                    <span itemprop="name">Vue</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+            <span class="post-meta-divider">|</span>
+            <span title="字数统计"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 227</span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  227
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
+      
+        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
           
-          <div class="collection-title">
-            <h2 class="archive-year" id="archive-year-2019">2019</h2>
+          
+            <div class="post-gallery-row">
+              <a class="post-gallery-img fancybox" href="https://yunpengGit.github.io/code/mock-img/fengbaobao/baoer6.jpg" rel="gallery_ck2u4wupu0000x8vlu7yd7zu6" itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
+                <img src="https://yunpengGit.github.io/code/mock-img/fengbaobao/baoer6.jpg" itemprop="contentUrl">
+              </a>
+            
+          
+
+          
           </div>
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2019/11/11/vue之nextTick/" itemprop="url">
-              
-                <span itemprop="name">vue之nextTick</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-11-11T14:11:27+08:00" content="2019-11-11">
-          11-11
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
+        </div>
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2019/11/05/数组的操作方法/" itemprop="url">
-              
-                <span itemprop="name">数组的操作方法</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-11-05T11:34:02+08:00" content="2019-11-05">
-          11-05
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
+        <h2 id="nextTick-使用"><a href="#nextTick-使用" class="headerlink" title="nextTick 使用"></a>nextTick 使用</h2><h4 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h4><ul>
+<li>需要在视图更新之后，基于新的视图进行操作。 </li>
+</ul>
+<blockquote>
+<p>动态改变视图，接着基于更新后视图，获取属性(内容，长宽，属性值等在改变后会相应改变的值)或操作时，在nextTick中操作</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//改变数据</span></span><br><span class="line">vm.message = <span class="string">'changed'</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//直接获取相关节点的内容，获取不到</span></span><br><span class="line"><span class="built_in">console</span>.log(vm.$el.textContent) <span class="comment">// 并不会得到'changed'</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//nextTick</span></span><br><span class="line">Vue.nextTick(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(vm.$el.textContent) <span class="comment">//可以得到'changed'</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2019/10/24/阿里云ecs服务器nginx搭建/" itemprop="url">
-              
-                <span itemprop="name">阿里云ecs服务器nginx搭建</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-10-24T14:00:15+08:00" content="2019-10-24">
-          10-24
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
+<h4 id="created、mounted"><a href="#created、mounted" class="headerlink" title="created、mounted"></a>created、mounted</h4><p>需要注意的是，在 created 和 mounted 阶段，如果需要操作渲染后的试图，也要使用 nextTick 方法。</p>
+<p>官方文档说明：</p>
+<blockquote>
+<p>注意 mounted 不会承诺所有的子组件也都一起被挂载。如果你希望等到整个视图都渲染完毕，可以用 vm.$nextTick 替换掉 mounted</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">mounted: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.$nextTick(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// Code that will run only after the</span></span><br><span class="line">    <span class="comment">// entire view has been rendered</span></span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2019/10/22/隐式转换的秘密/" itemprop="url">
-              
-                <span itemprop="name">隐式转换的秘密</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-10-22T15:07:52+08:00" content="2019-10-22">
-          10-22
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2019/09/02/event-loop/" itemprop="url">
-              
-                <span itemprop="name">event-loop</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-09-02T16:46:48+08:00" content="2019-09-02">
-          09-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2019/08/29/js-type-conversion/" itemprop="url">
-              
-                <span itemprop="name">js类型转换</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-29T11:16:31+08:00" content="2019-08-29">
-          08-29
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2019/08/28/promise-info/" itemprop="url">
-              
-                <span itemprop="name">promise-介绍</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-28T10:51:17+08:00" content="2019-08-28">
-          08-28
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2019/08/23/promise/" itemprop="url">
-              
-                <span itemprop="name">Promise 到 Generator 再到 Async / Await</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-23T16:50:03+08:00" content="2019-08-23">
-          08-23
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    baoer
+  </li>
+  <li class="post-copyright-link">
+    <strong>发布时间：</strong>
+    2019年11月11日 - 14:11
+  </li>
+  <li class="post-copyright-link">
+    <strong>最后更新：</strong>
+    2019年11月11日 - 15:57
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://yunpengGit.github.io/2019/11/11/vue之nextTick/" title="vue之nextTick">https://yunpengGit.github.io/2019/11/11/vue之nextTick/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+    <div>
+      
+    </div>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Vue/" rel="tag"><i class="fa fa-tag"></i> Vue</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/11/05/数组的操作方法/" rel="next" title="数组的操作方法">
+                <i class="fa fa-chevron-left"></i> 数组的操作方法
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -618,6 +580,15 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80NjMxMi8yMjgyMw=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -638,8 +609,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -737,6 +717,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#nextTick-使用"><span class="nav-number">1.</span> <span class="nav-text">nextTick 使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#使用场景"><span class="nav-number">1.0.1.</span> <span class="nav-text">使用场景</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#created、mounted"><span class="nav-number">1.0.2.</span> <span class="nav-text">created、mounted</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -895,6 +891,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -923,6 +923,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 

@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>vue之nextTick</title>
+    <url>/2019/11/11/vue%E4%B9%8BnextTick/</url>
+    <content><![CDATA[<h2 id="nextTick-使用"><a href="#nextTick-使用" class="headerlink" title="nextTick 使用"></a>nextTick 使用</h2><h4 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h4><ul>
+<li>需要在视图更新之后，基于新的视图进行操作。 </li>
+</ul>
+<blockquote>
+<p>动态改变视图，接着基于更新后视图，获取属性(内容，长宽，属性值等在改变后会相应改变的值)或操作时，在nextTick中操作</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//改变数据</span></span><br><span class="line">vm.message = <span class="string">'changed'</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//直接获取相关节点的内容，获取不到</span></span><br><span class="line"><span class="built_in">console</span>.log(vm.$el.textContent) <span class="comment">// 并不会得到'changed'</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//nextTick</span></span><br><span class="line">Vue.nextTick(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(vm.$el.textContent) <span class="comment">//可以得到'changed'</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h4 id="created、mounted"><a href="#created、mounted" class="headerlink" title="created、mounted"></a>created、mounted</h4><p>需要注意的是，在 created 和 mounted 阶段，如果需要操作渲染后的试图，也要使用 nextTick 方法。</p>
+<p>官方文档说明：</p>
+<blockquote>
+<p>注意 mounted 不会承诺所有的子组件也都一起被挂载。如果你希望等到整个视图都渲染完毕，可以用 vm.$nextTick 替换掉 mounted</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">mounted: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.$nextTick(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// Code that will run only after the</span></span><br><span class="line">    <span class="comment">// entire view has been rendered</span></span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Vue</category>
+        <category>Vue</category>
+      </categories>
+      <tags>
+        <tag>Vue</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>数组的操作方法</title>
     <url>/2019/11/05/%E6%95%B0%E7%BB%84%E7%9A%84%E6%93%8D%E4%BD%9C%E6%96%B9%E6%B3%95/</url>
     <content><![CDATA[<h1 id="重学数组的操作"><a href="#重学数组的操作" class="headerlink" title="重学数组的操作"></a>重学数组的操作</h1><h2 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h2><p><code>Array.from()</code>  从一个类似数组或可迭代对象创建一个新的，<strong>浅拷贝的数组实例。</strong> 返回一个新的数组</p>
