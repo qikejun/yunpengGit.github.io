@@ -82,20 +82,20 @@
 
 
 
-<meta name="description" content="1. js 异步处理的异步最早的解决方案是回调函数，如事件的回调，setInterval/setTimeout 中的回调。但是回到函数有一个很常见的问题，回调地狱。 为了解决回调地狱问题，社区提出了 promise 解决方案，es6 将其写进了语言标准，promise 解决了回调地狱问题，但是 promise 也存在一些问题，如错误能被 try catch，而且使用 promise 的链式调用，其">
+<meta name="description" content="js 拷贝浅拷贝 创建一个新对象，这个对象有原生对象属性值的一个精确拷贝。如果属性是基本类型（undefined，null，String，Number，Boolean），拷贝的就是基本类型的值，如果属性是引用类型（ Object、Array、Function、Date 等对象类型 ），拷贝的是内存地址（指针）  Array12345678910111213141516var arr1 = [1,">
 <meta name="keywords" content="js">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Promise 到 Generator 再到 Async &#x2F; Await">
-<meta property="og:url" content="https://yunpengGit.github.io/2019/08/23/promise/index.html">
+<meta property="og:title" content="js拷贝">
+<meta property="og:url" content="https://yunpengGit.github.io/2019/11/11/js拷贝/index.html">
 <meta property="og:site_name" content="baoerjie">
-<meta property="og:description" content="1. js 异步处理的异步最早的解决方案是回调函数，如事件的回调，setInterval/setTimeout 中的回调。但是回到函数有一个很常见的问题，回调地狱。 为了解决回调地狱问题，社区提出了 promise 解决方案，es6 将其写进了语言标准，promise 解决了回调地狱问题，但是 promise 也存在一些问题，如错误能被 try catch，而且使用 promise 的链式调用，其">
+<meta property="og:description" content="js 拷贝浅拷贝 创建一个新对象，这个对象有原生对象属性值的一个精确拷贝。如果属性是基本类型（undefined，null，String，Number，Boolean），拷贝的就是基本类型的值，如果属性是引用类型（ Object、Array、Function、Date 等对象类型 ），拷贝的是内存地址（指针）  Array12345678910111213141516var arr1 = [1,">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://yunpengGit.github.io/code/mock-img/fengbaobao/baoerjierichang1.jpg">
-<meta property="og:updated_time" content="2019-08-28T08:15:41.596Z">
+<meta property="og:image" content="https://yunpengGit.github.io/code/mock-img/fengbaobao/baoer7.jpg">
+<meta property="og:updated_time" content="2019-11-14T03:27:59.575Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Promise 到 Generator 再到 Async &#x2F; Await">
-<meta name="twitter:description" content="1. js 异步处理的异步最早的解决方案是回调函数，如事件的回调，setInterval/setTimeout 中的回调。但是回到函数有一个很常见的问题，回调地狱。 为了解决回调地狱问题，社区提出了 promise 解决方案，es6 将其写进了语言标准，promise 解决了回调地狱问题，但是 promise 也存在一些问题，如错误能被 try catch，而且使用 promise 的链式调用，其">
-<meta name="twitter:image" content="https://yunpengGit.github.io/code/mock-img/fengbaobao/baoerjierichang1.jpg">
+<meta name="twitter:title" content="js拷贝">
+<meta name="twitter:description" content="js 拷贝浅拷贝 创建一个新对象，这个对象有原生对象属性值的一个精确拷贝。如果属性是基本类型（undefined，null，String，Number，Boolean），拷贝的就是基本类型的值，如果属性是引用类型（ Object、Array、Function、Date 等对象类型 ），拷贝的是内存地址（指针）  Array12345678910111213141516var arr1 = [1,">
+<meta name="twitter:image" content="https://yunpengGit.github.io/code/mock-img/fengbaobao/baoer7.jpg">
 
 
 
@@ -125,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="https://yunpengGit.github.io/2019/08/23/promise/">
+  <link rel="canonical" href="https://yunpengGit.github.io/2019/11/11/js拷贝/">
 
 
 
 
 
-  <title>Promise 到 Generator 再到 Async / Await | baoerjie</title>
+  <title>js拷贝 | baoerjie</title>
   
 
 
@@ -321,7 +321,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://yunpengGit.github.io/2019/08/23/promise/">
+    <link itemprop="mainEntityOfPage" href="https://yunpengGit.github.io/2019/11/11/js拷贝/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="baoer">
@@ -338,7 +338,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Promise 到 Generator 再到 Async / Await</h2>
+          <h2 class="post-title" itemprop="name headline">js拷贝</h2>
         
 
         <div class="post-meta">
@@ -350,8 +350,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-23T16:50:03+08:00">
-                2019-08-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-11T17:04:18+08:00">
+                2019-11-11
               </time>
             
 
@@ -373,8 +373,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/前端/" itemprop="url" rel="index">
-                    <span itemprop="name">前端</span>
+                  <a href="/categories/js/" itemprop="url" rel="index">
+                    <span itemprop="name">js</span>
                   </a>
                 </span>
 
@@ -384,8 +384,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/前端/Js/" itemprop="url" rel="index">
-                    <span itemprop="name">Js</span>
+                  <a href="/categories/js/拷贝/" itemprop="url" rel="index">
+                    <span itemprop="name">拷贝</span>
                   </a>
                 </span>
 
@@ -408,7 +408,7 @@
             <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
             <span class="post-meta-divider">|</span>
-            <span title="字数统计"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 1.7k</span>
+            <span title="字数统计"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 1.4k</span>
           
 
           
@@ -422,7 +422,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.7k
+                  1.4k
                 </span>
               
 
@@ -461,8 +461,8 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="https://yunpengGit.github.io/code/mock-img/fengbaobao/baoerjierichang1.jpg" rel="gallery_ck2y5m2zq0007h4vl94ng35f5" itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
-                <img src="https://yunpengGit.github.io/code/mock-img/fengbaobao/baoerjierichang1.jpg" itemprop="contentUrl">
+              <a class="post-gallery-img fancybox" href="https://yunpengGit.github.io/code/mock-img/fengbaobao/baoer7.jpg" rel="gallery_ck2y5m2ws0000h4vlgvl2z7lg" itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
+                <img src="https://yunpengGit.github.io/code/mock-img/fengbaobao/baoer7.jpg" itemprop="contentUrl">
               </a>
             
           
@@ -473,72 +473,64 @@
       
 
       
-        <h4 id="1-js-异步处理的"><a href="#1-js-异步处理的" class="headerlink" title="1. js 异步处理的"></a>1. js 异步处理的</h4><p>异步最早的解决方案是回调函数，如事件的回调，setInterval/setTimeout 中的回调。但是回到函数有一个很常见的问题，回调地狱。</p>
-<p>为了解决回调地狱问题，社区提出了 promise 解决方案，es6 将其写进了语言标准，promise 解决了回调地狱问题，但是 promise 也存在一些问题，如错误能被 try catch，而且使用 promise 的链式调用，其实没有从根本上解决回调地狱的问题，只是换了一种写法。</p>
-<p>es6 中引入了 Generator 函数，Generator 是一种异步编程解决方案，Generator 函数是协程在 es6 的实现，最大的特点就是可以交出函数的执行权，Generator 函数可以看出是异步任务的容器，需要暂停的地方，都用 yield 语句注明，但是 Genrator 使用起来比较复杂。</p>
-<p>es7 又提出了新的一步解决方案：async / await, async 是 Generator 的函数语法糖，async/await 使得异步代码看起来像同步，异步编程发展的目标就是让异步逻辑的代码看起来像同步一样。</p>
-<blockquote>
-<p>回调函数： callback</p>
+        <h1 id="js-拷贝"><a href="#js-拷贝" class="headerlink" title="js 拷贝"></a>js 拷贝</h1><h3 id="浅拷贝"><a href="#浅拷贝" class="headerlink" title="浅拷贝"></a>浅拷贝</h3><blockquote>
+<p>创建一个新对象，这个对象有原生对象属性值的一个精确拷贝。如果属性是基本类型（undefined，null，String，Number，Boolean），拷贝的就是基本类型的值，如果属性是引用类型（ Object、Array、Function、Date 等对象类型 ），拷贝的是内存地址（指针）</p>
 </blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//node读取文件</span></span><br><span class="line">fs.readFile(xx,<span class="string">'utf-8'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">err. data</span>) </span>&#123;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h4 id="Array"><a href="#Array" class="headerlink" title="Array"></a>Array</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr1 = [<span class="number">1</span>, <span class="number">2</span>], arr2 = arr1.slice();</span><br><span class="line"><span class="built_in">console</span>.log(arr1); <span class="comment">//[1, 2]</span></span><br><span class="line"><span class="built_in">console</span>.log(arr2); <span class="comment">//[1, 2]</span></span><br><span class="line"></span><br><span class="line">arr2[<span class="number">0</span>] = <span class="number">3</span>; <span class="comment">//修改arr2</span></span><br><span class="line"><span class="built_in">console</span>.log(arr1); <span class="comment">//[1, 2]</span></span><br><span class="line"><span class="built_in">console</span>.log(arr2); <span class="comment">//[3, 2]</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> arr1 = [<span class="number">1</span>, <span class="number">2</span>, [<span class="number">3</span>, <span class="number">4</span>]], arr2 = arr1.slice();</span><br><span class="line"><span class="built_in">console</span>.log(arr1); <span class="comment">//[1, 2, [3, 4]]</span></span><br><span class="line"><span class="built_in">console</span>.log(arr2); <span class="comment">//[1, 2, [3, 4]]</span></span><br><span class="line"></span><br><span class="line">arr2[<span class="number">2</span>][<span class="number">1</span>] = <span class="number">5</span>; </span><br><span class="line"><span class="built_in">console</span>.log(arr1); <span class="comment">//[1, 2, [3, 5]]</span></span><br><span class="line"><span class="built_in">console</span>.log(arr2); <span class="comment">//[1, 2, [3, 5]]</span></span><br></pre></td></tr></table></figure>
 
-<p>回调函数的使用场景（包括但不限于）：</p>
-<ol>
-<li>事件回调</li>
-<li>Node API</li>
-<li>setTimeout 、setInterval 中的回调函数</li>
-</ol>
-<p>异步回调嵌套会导致代码难以维护，并且不方便统一处理错误，不能 try catch 和回调地狱（如读取 A 文本的类容，再根据 A 文本内容读取 B 文本，再根据 B 文本内容读取 C..)</p>
-<p>回调地狱：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">fs.readFile(A, <span class="string">'utf-8'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  fs.readFile(B, <span class="string">'utf-8'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    fs.readFile(C, <span class="string">'utf-8'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="comment">//...</span></span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p><strong>concat</strong>、<strong>Array.from()</strong>  也是浅拷贝</p>
+<h4 id="Object"><a href="#Object" class="headerlink" title="Object"></a>Object</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> target = &#123;&#125;;</span><br><span class="line"><span class="keyword">let</span> source = &#123; <span class="attr">a</span>: &#123; <span class="attr">b</span>: <span class="number">2</span> &#125; &#125;;</span><br><span class="line"><span class="built_in">Object</span>.assign(target, source);</span><br><span class="line"><span class="built_in">console</span>.log(target); <span class="comment">// &#123; a: &#123; b: 10 &#125; &#125;; 指针未变，实际内容已改变（浅拷贝）只拷贝了指针</span></span><br><span class="line">source.a.b = <span class="number">10</span>;</span><br><span class="line"><span class="built_in">console</span>.log(source); <span class="comment">// &#123; a: &#123; b: 10 &#125; &#125;;</span></span><br><span class="line"><span class="built_in">console</span>.log(target); <span class="comment">// &#123; a: &#123; b: 10 &#125; &#125;;</span></span><br></pre></td></tr></table></figure>
 
-<h4 id="2-Promise"><a href="#2-Promise" class="headerlink" title="2. Promise"></a>2. Promise</h4><p>promise 主要解决回调地狱的问题，promise 最早由社区提出和实现，es6 将其写进语言标准，统一用法，原生提供 Promise 对象；</p>
-<p>Promise 解决回调地狱问题：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">read</span>(<span class="params">url</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">    fs.readFile(url, <span class="string">'utf-8'</span>, (err, data) =&gt; &#123;</span><br><span class="line">      <span class="keyword">if</span> (err) reject(data)</span><br><span class="line">      resolve(data)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">read(A)</span><br><span class="line">  .then(<span class="function"><span class="params">data</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> read(B)</span><br><span class="line">  &#125;)</span><br><span class="line">  .then(<span class="function"><span class="params">data</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> read(C)</span><br><span class="line">  &#125;)</span><br><span class="line">  .catch(<span class="function"><span class="params">reason</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(reason)</span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>思考：</p>
-</blockquote>
-<p>在 Promise之前，你是如何处理异步并发问题的，假设有这样一个需求：读取三个文件内容，都读取成功后，输出最终的结果。有了 Promise 之后，又如何处理呢？<a href="https://github.com/yunpengGit/code/blob/master/js-example/promise之前处理异步.js" target="_blank" rel="noopener">示例</a></p>
-<h4 id="3-Generator"><a href="#3-Generator" class="headerlink" title="3. Generator"></a>3. Generator</h4><p>Generator 函数是 ES6 提供的一种异步编程解决方案，整个 Generator 函数就是一个封装的异步任务，或者说是异步任务的容器。异步操作需要暂停的地方，都用 yield 语句注明。</p>
-<p>Generator 函数一般配合 yield 或 Promise 使用。Generator 函数返回的是迭代器。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span>* <span class="title">gen</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> a = <span class="keyword">yield</span> <span class="number">11</span></span><br><span class="line">  <span class="built_in">console</span>.log(a)</span><br><span class="line">  <span class="keyword">let</span> b = <span class="keyword">yield</span> <span class="number">22</span></span><br><span class="line">  <span class="built_in">console</span>.log(b)</span><br><span class="line">  <span class="keyword">let</span> c = <span class="keyword">yield</span> <span class="number">33</span></span><br><span class="line">  <span class="built_in">console</span>.log(c)</span><br><span class="line">  <span class="keyword">let</span> d = <span class="keyword">yield</span> <span class="number">44</span></span><br><span class="line">  <span class="built_in">console</span>.log(d)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> t = gen()</span><br><span class="line"><span class="comment">//next方法可以带一个参数，该参数就会被当作上一个yield表达式的返回值</span></span><br><span class="line"><span class="comment">//next 调用后返回一个对象&#123;value: yield 后面的值, done: false&#125;</span></span><br><span class="line">t.next(<span class="number">1</span>) <span class="comment">//第一次调用next函数时，传递的参数无效 返回&#123;value:11,done:false&#125;</span></span><br><span class="line">t.next(<span class="number">2</span>) <span class="comment">//a输出2; 返回&#123;value:22,done:false&#125;</span></span><br><span class="line">t.next(<span class="number">3</span>) <span class="comment">//b输出3;</span></span><br><span class="line">t.next(<span class="number">4</span>) <span class="comment">//c输出4;</span></span><br><span class="line">t.next(<span class="number">5</span>) <span class="comment">//d输出5; 返回&#123;value: undefined, done: true&#125;</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="4-Async-Await"><a href="#4-Async-Await" class="headerlink" title="4. Async / Await"></a>4. Async / Await</h4><p>async 关键字，<strong>定义的函数是异步函数，返回 promise 对象</strong></p>
-<p>await 操作符用于等待一个 Promise 对象, <strong>只能在异步函数 async function 内部使用</strong>.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fun1 = <span class="function"><span class="params">()</span> =&gt;</span> <span class="built_in">console</span>.log(<span class="string">'叭叭叭1'</span>)</span><br><span class="line"><span class="keyword">const</span> fun2 = <span class="function"><span class="params">()</span> =&gt;</span> <span class="built_in">console</span>.log(<span class="string">'叭叭叭2'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> fun = <span class="keyword">async</span> () =&gt; &#123;</span><br><span class="line">  <span class="comment">// async关键字，定义的函数是异步函数，返回promise对象</span></span><br><span class="line">  <span class="keyword">await</span> fun1()</span><br><span class="line">&#125;</span><br><span class="line">fun().then(fun2())</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'叭叭叭'</span>)</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<h3 id="async-await-的实现原理"><a href="#async-await-的实现原理" class="headerlink" title="async/await 的实现原理"></a>async/await 的实现原理</h3></blockquote>
-<p>async/await 就是 Generator 的语法糖，就是将 Generator 函数的星号（*）替换成 async，将 yield 替换成 await。</p>
-<ol>
-<li>async 函数内置执行器，函数调用之后，会自动执行(Generator 需要手动调用函数 next())，输出最后结果。</li>
-<li>更好的语义化，async 和 await，对比星号和 yield。async 表示函数里有异步操作，await 表示紧跟在后面的表达式需要等待结果。</li>
-<li>更广的适用性。co 模块约定，yield 命令后面只能是 Thunk 函数或 Promise 对象，而 async 函数的 await 命令后面，可以是 Promise 对象和原始类型的值。</li>
-<li>返回值是 Promise，<strong><span style="color:purple">async 函数的返回值是 Promise 对象在</span>，Generator 的返回值是 Iterator</strong>，Promise 对象使用起来更加方便。</li>
-</ol>
-<blockquote>
-<p>async 函数的实现原理，将 Generator 函数和自动执行器，包装在函数里<a href="https://github.com/yunpengGit/code/blob/master/js-example/async.js" target="_blank" rel="noopener">示例</a></p>
-</blockquote>
-<blockquote>
-<p>使用 async/await 需要注意什么</p>
-</blockquote>
-<ol>
-<li><p>await 命令后面的Promise对象，运行结果可能是 rejected，此时等同于 async 函数返回的 Promise 对象被reject。因此需要加上错误处理，可以给每个 await 后的 Promise 增加 catch 方法；也可以将 await 的代码放在 <code>try...catch</code> 中。</p>
+<h5 id="Object-assign-注意："><a href="#Object-assign-注意：" class="headerlink" title="Object.assign  注意："></a><strong>Object.assign</strong>  注意：</h5><ol>
+<li><p>不会拷贝对象继承的属性</p>
 </li>
-<li><p>多个await命令后面的异步操作，如果不存在继发关系，最好让它们同时触发。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//下面两种写法都可以同时触发</span></span><br><span class="line"><span class="comment">//法一</span></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">await</span> <span class="built_in">Promise</span>.all([</span><br><span class="line">        <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve</span>) =&gt;</span> &#123;</span><br><span class="line">            setTimeout(resolve, <span class="number">600</span>);</span><br><span class="line">        &#125;),</span><br><span class="line">        <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve</span>) =&gt;</span> &#123;</span><br><span class="line">            setTimeout(resolve, <span class="number">600</span>);</span><br><span class="line">        &#125;)</span><br><span class="line">    ])</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//法二</span></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">f2</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> fn1 = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve</span>) =&gt;</span> &#123;</span><br><span class="line">            setTimeout(resolve, <span class="number">800</span>);</span><br><span class="line">        &#125;);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">let</span> fn2 = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve</span>) =&gt;</span> &#123;</span><br><span class="line">            setTimeout(resolve, <span class="number">800</span>);</span><br><span class="line">        &#125;)</span><br><span class="line">    <span class="keyword">await</span> fn1;</span><br><span class="line">    <span class="keyword">await</span> fn2;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li><p>不可枚举的属性</p>
 </li>
-<li><p>await命令只能用在async函数之中，如果用在普通函数，会报错。</p>
+<li><p>属性的数据属性/访问器属性</p>
 </li>
-<li><p>async 函数可以保留运行堆栈。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 函数a内部执行异步任务b()。当b()执行的时候，函数a()不会中断，而是继续执行。</span></span><br><span class="line"><span class="comment">* 等到b()执行结束，可能a()已执行结束，b()所在的上下文环境已经消失了。</span></span><br><span class="line"><span class="comment">* 如果b()或c()报错，错误堆栈将不包括a()。</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'b中的输出'</span>)</span><br><span class="line">        setTimeout(<span class="function">(<span class="params">resolve</span>)=&gt;</span> &#123;</span><br><span class="line">            resolve(<span class="string">'b-promise实例'</span>)</span><br><span class="line">        &#125;, <span class="number">200</span>,resolve)</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">c</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'c中的输出'</span>)</span><br><span class="line">    <span class="keyword">throw</span> <span class="built_in">Error</span>(<span class="number">10</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> a = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">//异步任务b</span></span><br><span class="line">    b().then(<span class="function">(<span class="params">data</span>) =&gt;</span> &#123;</span><br><span class="line">    	<span class="built_in">console</span>.log(data);</span><br><span class="line">        c()</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="comment">//同步输出</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'a中同步输出'</span>)</span><br><span class="line">    <span class="comment">//没有返回默认返回 undefined;</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">'a执行结束'</span></span><br><span class="line">&#125;;</span><br><span class="line">a();</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">    b中的输出</span></span><br><span class="line"><span class="comment">    a中同步输出</span></span><br><span class="line"><span class="comment">    "a执行结束" a()执行结束的返回</span></span><br><span class="line"><span class="comment">    b-promise实例</span></span><br><span class="line"><span class="comment">    c中的输出</span></span><br><span class="line"><span class="comment">    Uncaught (in promise) Error: 10</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 改成async函数</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">const</span> m = <span class="keyword">async</span> () =&gt; &#123;</span><br><span class="line">    <span class="keyword">var</span> b_result=<span class="keyword">await</span> b();</span><br><span class="line">    <span class="built_in">console</span>.log(b_result)</span><br><span class="line">    c();</span><br><span class="line">&#125;;</span><br><span class="line">m();</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">b中的输出</span></span><br><span class="line"><span class="comment">Promise &#123;&lt;pending&gt;&#125; a()执行结束的返回(async 后的函数执行返回一个promise对象)</span></span><br><span class="line"><span class="comment">b-promise实例</span></span><br><span class="line"><span class="comment">c中的输出</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+<li><p>可以拷贝Symbol类型</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj1 = &#123;</span><br><span class="line">    a:&#123;</span><br><span class="line">        b:<span class="number">1</span></span><br><span class="line">    &#125;,</span><br><span class="line">    sym:<span class="built_in">Symbol</span>(<span class="number">1</span>)</span><br><span class="line">&#125;;</span><br><span class="line"><span class="built_in">Object</span>.defineProperty(obj1,<span class="string">'c'</span>,&#123;</span><br><span class="line">    value:<span class="string">'不可枚举属性'</span>,</span><br><span class="line">    enumerable:<span class="literal">false</span></span><br><span class="line">&#125;);</span><br><span class="line"><span class="keyword">let</span> obj2 = &#123;&#125;;</span><br><span class="line"><span class="built_in">Object</span>.assign(obj2,obj1)</span><br><span class="line">obj1.a.b = <span class="number">2</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'obj1'</span>,obj1); </span><br><span class="line"><span class="comment">//&#123;a: &#123;b: 2&#125;, sym: Symbol(1), c: "不可枚举属性"&#125;</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'obj2'</span>,obj2); </span><br><span class="line"><span class="comment">//&#123;a: &#123;b: 2&#125;, sym: Symbol(1)&#125;</span></span><br></pre></td></tr></table></figure>
 
-
+<p> Symbol类型可以拷贝，不可枚举的属性被忽略,改变了obj1.a.b的值，obj2.a.b的值也会跟着改变</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = &#123;<span class="attr">a</span>:<span class="number">1</span>,<span class="attr">b</span>:&#123;<span class="attr">c</span>:<span class="number">1</span>&#125;&#125;</span><br><span class="line"><span class="keyword">let</span> obj2 = &#123;...obj&#125;;</span><br><span class="line">obj.a=<span class="number">2</span>;</span><br><span class="line"><span class="built_in">console</span>.log(obj); <span class="comment">//&#123;a:2,b:&#123;c:1&#125;&#125;</span></span><br><span class="line"><span class="built_in">console</span>.log(obj2); <span class="comment">//&#123;a:1,b:&#123;c:1&#125;&#125;</span></span><br><span class="line"></span><br><span class="line">obj.b.c = <span class="number">2</span>;</span><br><span class="line"><span class="built_in">console</span>.log(obj); <span class="comment">//&#123;a:2,b:&#123;c:2&#125;&#125;</span></span><br><span class="line"><span class="built_in">console</span>.log(obj2); <span class="comment">//&#123;a:1,b:&#123;c:2&#125;&#125;</span></span><br></pre></td></tr></table></figure>
 
 </li>
 </ol>
+<h5 id="浅拷贝实现"><a href="#浅拷贝实现" class="headerlink" title="浅拷贝实现"></a>浅拷贝实现</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> shallowClone = <span class="function"><span class="keyword">function</span>(<span class="params">target</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">typeof</span> target === <span class="string">'object'</span> &amp;&amp; target !== <span class="literal">null</span>) &#123;</span><br><span class="line">            <span class="keyword">var</span> cloneTarget = <span class="built_in">Array</span>.isArray(target) ? []: &#123;&#125;;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">var</span> prop <span class="keyword">in</span> target) &#123;</span><br><span class="line">                <span class="keyword">if</span> (target.hasOwnProperty(prop)) &#123;</span><br><span class="line">                    cloneTarget[prop] = target[prop];</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> cloneTarget;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> target;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 
+<h3 id="深拷贝"><a href="#深拷贝" class="headerlink" title="深拷贝"></a>深拷贝</h3><h5 id="JSON-parse-JSON-stringify-obj"><a href="#JSON-parse-JSON-stringify-obj" class="headerlink" title="*JSON.parse(JSON.stringify(obj)) *"></a>*<em>JSON.parse(JSON.stringify(obj)) *</em></h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj1 = &#123;</span><br><span class="line">    x: <span class="number">1</span>, </span><br><span class="line">    y: &#123;</span><br><span class="line">        m: <span class="number">1</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">var</span> obj2 = <span class="built_in">JSON</span>.parse(<span class="built_in">JSON</span>.stringify(obj1));</span><br><span class="line"><span class="built_in">console</span>.log(obj1) <span class="comment">//&#123;x: 1, y: &#123;m: 1&#125;&#125;</span></span><br><span class="line"><span class="built_in">console</span>.log(obj2) <span class="comment">//&#123;x: 1, y: &#123;m: 1&#125;&#125;</span></span><br><span class="line"></span><br><span class="line">obj2.y.m = <span class="number">2</span>; <span class="comment">//修改obj2.y.m</span></span><br><span class="line"><span class="built_in">console</span>.log(obj1) <span class="comment">//&#123;x: 1, y: &#123;m: 1&#125;&#125;</span></span><br><span class="line"><span class="built_in">console</span>.log(obj2) <span class="comment">//&#123;x: 2, y: &#123;m: 2&#125;&#125;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>转换值如果有 toJSON() 方法，该方法定义什么值将被序列化。</p>
+</li>
+<li><p>非数组对象的属性不能保证以特定的顺序出现在序列化后的字符串中。</p>
+</li>
+<li><p>布尔值、数字、字符串的包装对象在序列化过程中会自动转换成对应的原始值。</p>
+</li>
+<li><p><strong><code>undefined</code>、任意的函数以及 symbol 值，在序列化过程中会被忽略（出现在非数组对象的属性值中时）或者被转换成 <code>null</code>（出现在数组中时）。函数、undefined 被单独转换时，会返回 undefined，</strong>如<code>JSON.stringify(function(){})</code> or <code>JSON.stringify(undefined)</code>.</p>
+</li>
+<li><p>对包含循环引用的对象（对象之间相互引用，形成无限循环）执行此方法，会抛出错误。</p>
+</li>
+<li><p>所有以 symbol 为属性键的属性都会被完全忽略掉，即便 <code>replacer</code> 参数中强制指定包含了它们。</p>
+</li>
+<li><p>Date 日期调用了 toJSON() 将其转换为了 string 字符串（同Date.toISOString()），因此会被当做字符串处理。</p>
+</li>
+<li><p>NaN 和 Infinity 格式的数值及 null 都会被当做 null。</p>
+</li>
+<li><p>其他类型的对象，包括 Map/Set/WeakMap/WeakSet，仅会序列化可枚举的属性。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj1 = &#123;</span><br><span class="line">    x: <span class="number">1</span>,</span><br><span class="line">    y: <span class="literal">undefined</span>,</span><br><span class="line">    z: <span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">z1, z2</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> z1 + z2</span><br><span class="line">    &#125;,</span><br><span class="line">    a: <span class="built_in">Symbol</span>(<span class="string">"foo"</span>)</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">var</span> obj2 = <span class="built_in">JSON</span>.parse(<span class="built_in">JSON</span>.stringify(obj1));</span><br><span class="line"><span class="built_in">console</span>.log(obj1) <span class="comment">//&#123;x: 1, y: undefined, z: ƒ, a: Symbol(foo)&#125;</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">JSON</span>.stringify(obj1)); <span class="comment">//&#123;"x":1&#125;</span></span><br><span class="line"><span class="built_in">console</span>.log(obj2) <span class="comment">//&#123;x: 1&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>实现深拷贝</p>
+<ul>
+<li>简易深拷贝</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> deepClone = <span class="function"><span class="keyword">function</span>(<span class="params">target</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">typeof</span> target === <span class="string">'object'</span> &amp;&amp; target !== <span class="literal">null</span>) &#123;</span><br><span class="line">            <span class="keyword">var</span> cloneTarget = <span class="built_in">Array</span>.isArray(target) ? []: &#123;&#125;;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">var</span> prop <span class="keyword">in</span> target) &#123;</span><br><span class="line">                <span class="keyword">if</span>(<span class="keyword">typeof</span> obj[key] ===<span class="string">'object'</span>)&#123; </span><br><span class="line">                  	cloneTarget[key] = deepClone(obj[key]) <span class="comment">//值是对象就再次调用函数</span></span><br><span class="line">               &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                   <span class="keyword">if</span> (target.hasOwnProperty(prop)) &#123;</span><br><span class="line">                       cloneTarget[prop] = target[prop];</span><br><span class="line">                   &#125;</span><br><span class="line">               &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> cloneTarget;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> target;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> isComplexDataType = <span class="function"><span class="params">obj</span> =&gt;</span> (<span class="keyword">typeof</span> obj === <span class="string">'object'</span> || <span class="keyword">typeof</span> obj === <span class="string">'function'</span>) &amp;&amp; (obj !== <span class="literal">null</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> deepClone = <span class="function"><span class="keyword">function</span> (<span class="params">obj, hash = new WeakMap(</span>)) </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (obj.constructor === <span class="built_in">Date</span>) <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Date</span>(obj);   <span class="comment">//日期对象就返回一个新的日期对象</span></span><br><span class="line">    <span class="keyword">if</span> (obj.constructor === <span class="built_in">RegExp</span>) <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">RegExp</span>(obj);  <span class="comment">//正则对象就返回一个新的正则对象</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//如果成环了,参数obj = obj.loop = 最初的obj 会在WeakMap中找到第一次放入的obj提前返回第一次放入WeakMap的cloneObj</span></span><br><span class="line">    <span class="keyword">if</span> (hash.has(obj)) <span class="keyword">return</span> hash.get(obj)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> allDesc = <span class="built_in">Object</span>.getOwnPropertyDescriptors(obj);     <span class="comment">//遍历传入参数所有键的特性</span></span><br><span class="line">    <span class="keyword">let</span> cloneObj = <span class="built_in">Object</span>.create(<span class="built_in">Object</span>.getPrototypeOf(obj), allDesc); <span class="comment">//继承原型链</span></span><br><span class="line"></span><br><span class="line">    hash.set(obj, cloneObj)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> key <span class="keyword">of</span> <span class="built_in">Reflect</span>.ownKeys(obj)) &#123;   <span class="comment">//Reflect.ownKeys(obj)可以拷贝不可枚举属性和符号类型</span></span><br><span class="line">        <span class="comment">// 如果值是引用类型(非函数)则递归调用deepClone</span></span><br><span class="line">        cloneObj[key] =</span><br><span class="line">            (isComplexDataType(obj[key]) &amp;&amp; <span class="keyword">typeof</span> obj[key] !== <span class="string">'function'</span>) ?</span><br><span class="line">                deepClone(obj[key], hash) : obj[key];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> cloneObj;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> obj = &#123;</span><br><span class="line">    num: <span class="number">0</span>,</span><br><span class="line">    str: <span class="string">''</span>,</span><br><span class="line">    boolean: <span class="literal">true</span>,</span><br><span class="line">    unf: <span class="literal">undefined</span>,</span><br><span class="line">    nul: <span class="literal">null</span>,</span><br><span class="line">    obj: &#123;</span><br><span class="line">        name: <span class="string">'我是一个对象'</span>,</span><br><span class="line">        id: <span class="number">1</span></span><br><span class="line">    &#125;,</span><br><span class="line">    arr: [<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>],</span><br><span class="line">    func: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'我是一个函数'</span>)</span><br><span class="line">    &#125;,</span><br><span class="line">    date: <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">0</span>),</span><br><span class="line">    reg: <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">'/我是一个正则/ig'</span>),</span><br><span class="line">    [<span class="built_in">Symbol</span>(<span class="string">'1'</span>)]: <span class="number">1</span>,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.defineProperty(obj, <span class="string">'innumerable'</span>, &#123;</span><br><span class="line">    enumerable: <span class="literal">false</span>,</span><br><span class="line">    value: <span class="string">'不可枚举属性'</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">obj = <span class="built_in">Object</span>.create(obj, <span class="built_in">Object</span>.getOwnPropertyDescriptors(obj))</span><br><span class="line"></span><br><span class="line">obj.loop = obj</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> cloneObj = deepClone(obj);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'obj'</span>, obj);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'cloneObj'</span>, cloneObj);</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> key <span class="keyword">of</span> <span class="built_in">Object</span>.keys(cloneObj)) &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">typeof</span> cloneObj[key] === <span class="string">'object'</span> || <span class="keyword">typeof</span> cloneObj[key] === <span class="string">'function'</span>) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">`<span class="subst">$&#123;key&#125;</span>相同吗？ `</span>, cloneObj[key] === obj[key])</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -558,15 +550,15 @@
   </li>
   <li class="post-copyright-link">
     <strong>发布时间：</strong>
-    2019年08月23日 - 16:50
+    2019年11月11日 - 17:04
   </li>
   <li class="post-copyright-link">
     <strong>最后更新：</strong>
-    2019年08月28日 - 16:15
+    2019年11月14日 - 11:27
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://yunpengGit.github.io/2019/08/23/promise/" title="Promise 到 Generator 再到 Async / Await">https://yunpengGit.github.io/2019/08/23/promise/</a>
+    <a href="https://yunpengGit.github.io/2019/11/11/js拷贝/" title="js拷贝">https://yunpengGit.github.io/2019/11/11/js拷贝/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -596,15 +588,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2019/11/11/vue之nextTick/" rel="next" title="vue之nextTick">
+                <i class="fa fa-chevron-left"></i> vue之nextTick
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/08/28/promise-info/" rel="prev" title="promise-介绍">
-                promise-介绍 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -779,7 +771,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-js-异步处理的"><span class="nav-number">1.</span> <span class="nav-text">1. js 异步处理的</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-Promise"><span class="nav-number">2.</span> <span class="nav-text">2. Promise</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-Generator"><span class="nav-number">3.</span> <span class="nav-text">3. Generator</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-Async-Await"><span class="nav-number">4.</span> <span class="nav-text">4. Async / Await</span></a></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#async-await-的实现原理"><span class="nav-number"></span> <span class="nav-text">async/await 的实现原理</span></a></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#js-拷贝"><span class="nav-number">1.</span> <span class="nav-text">js 拷贝</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#浅拷贝"><span class="nav-number">1.0.1.</span> <span class="nav-text">浅拷贝</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Array"><span class="nav-number">1.0.1.1.</span> <span class="nav-text">Array</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Object"><span class="nav-number">1.0.1.2.</span> <span class="nav-text">Object</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Object-assign-注意："><span class="nav-number">1.0.1.2.1.</span> <span class="nav-text">Object.assign  注意：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#浅拷贝实现"><span class="nav-number">1.0.1.2.2.</span> <span class="nav-text">浅拷贝实现</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#深拷贝"><span class="nav-number">1.0.2.</span> <span class="nav-text">深拷贝</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#JSON-parse-JSON-stringify-obj"><span class="nav-number">1.0.2.0.1.</span> <span class="nav-text">*JSON.parse(JSON.stringify(obj)) *</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
